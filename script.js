@@ -12,9 +12,9 @@ let earnsBeforeTax = document.querySelector('.beforeTax')
 for (let i = 0; i < taxInput.length; i++) {
   taxInput[i].addEventListener('keyup', function () {
     earnsBeforeTax.value = (600 / totalDays.valueAsNumber ) * workedDays.valueAsNumber
-    let index = income.valueAsNumber * .7/ 2
-    psd.valueAsNumber = 400 * 0.09
-    vsd.valueAsNumber = index * 0.309
+    let index = income.valueAsNumber * .9 * .7
+    psd.valueAsNumber = 555 * 0.0698
+    vsd.valueAsNumber = index * 0.1432
     gpm.valueAsNumber = income.valueAsNumber * 0.7 * 0.05
     totalTax.value = psd.valueAsNumber + vsd.valueAsNumber + gpm.valueAsNumber
     afterTax.valueAsNumber = income.valueAsNumber - totalTax.valueAsNumber
